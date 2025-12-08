@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*.pyc
+
+# Virtual environments
+.venv
+
+#env files
+.env
+
+# Docker
+*.log
+*.sqlite3
+docker-compose.override.yml
