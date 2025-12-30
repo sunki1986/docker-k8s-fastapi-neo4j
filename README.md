@@ -68,8 +68,9 @@ bash
 kubectl get pods,services
 Use code with caution.
 
-# 5. Project Structure
+### 5. Project Structure
 The repository maintains a clear structure, separating the application code from the deployment configurations.
+
 .
 ├── .venv/                         # Virtual environment
 ├── fastapi_app1/                  # First FastAPI application
@@ -92,4 +93,3 @@ The repository maintains a clear structure, separating the application code from
 ├── docker-compose.yml             # Docker Compose configuration file
 ├── README.md                      # This file
 └── uv.lock
-Would 
