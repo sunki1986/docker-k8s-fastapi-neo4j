@@ -12,9 +12,13 @@ Project Structure
 The main objective of this project was to build a robust backend system using Python's FastAPI framework and the Neo4j database, exploring different container orchestration solutions. It provides a clear, step-by-step guide for running the application using familiar tools like Docker Compose before migrating to a more scalable, production-ready Kubernetes environment.
 ## 2. Architecture
 The application comprises three core services:
+
 fastapi_app1: A Python FastAPI service.
+
 fastapi_app2: A second Python FastAPI service.
+
 neo4j: A Neo4j graph database instance for persistent storage.
+
 All services are containerized using Docker, with configurations managed via YAML files.
 ## 3. Local Deployment with Docker Compose
 This section outlines how to get the three services running locally using Docker Compose.
