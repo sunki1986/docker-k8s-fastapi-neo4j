@@ -72,27 +72,27 @@ kubectl get pods,services
 Use code with caution.
 
 ## 5. Project Structure
+
 The repository maintains a clear structure, separating the application code from the deployment configurations.
 
-.
-├── .venv/                         # Virtual environment
-├── fastapi_app1/                  # First FastAPI application
-│   ├── Dockerfile                 
-│   ├── main.py
-│   └── pyproject.toml
-├── fastapi_app2/                  # Second FastAPI application
-│   ├── Dockerfile
-│   ├── main.py
-│   └── pyproject.toml
-├── k8s/                           # Kubernetes configuration files
-│   ├── fastapi_app1_deploy.yaml
-│   ├── fastapi_app2_deploy.yaml
-│   ├── neo4j-config.yaml
-│   ├── neo4j-deployment.yaml
-│   └── neo4j-secret.yaml
-├── .env                           # Environment variables
-├── .gitignore
-├── .python-version
-├── docker-compose.yml             # Docker Compose configuration file
-├── README.md                      # This file
-└── uv.lock
+-   `.venv/` (Virtual environment)
+-   `fastapi_app1/` (First FastAPI application)
+    -   `Dockerfile`
+    -   `main.py`
+    -   `pyproject.toml`
+-   `fastapi_app2/` (Second FastAPI application)
+    -   `Dockerfile`
+    -   `main.py`
+    -   `pyproject.toml`
+-   `k8s/` (Kubernetes configuration files)
+    -   `fastapi_app1_deploy.yaml`
+    -   `fastapi_app2_deploy.yaml`
+    -   `neo4j-config.yaml`
+    -   `neo4j-deployment.yaml`
+    -   `neo4j-secret.yaml`
+-   `.env` (Environment variables)
+-   `.gitignore`
+-   `.python-version`
+-   `docker-compose.yml` (Docker Compose configuration file)
+-   `README.md` (This file)
+-   `uv.lock`
