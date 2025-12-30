@@ -25,7 +25,7 @@ app = FastAPI()
 
 @app.get("/ping")
 def ping():
-    return {"message": "FastAPI is running"}
+    return {"message": "FastAPI 1 is running"}
 
 
 @app.get("/neo4j-test")

@@ -1,0 +1,58 @@
+# ============================
+# FastAPI App 1 - Deployment
+# ============================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-app2
+  template:
+    metadata:
+      labels:
+        app: fastapi-app2
+    spec:
+      containers:
+      - name: fastapi-app2
+        image: fastapi_app2:latest       # <-- YOUR IMAGE NAME
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8002
+        env:
+        - name: NEO4J_URI
+          valueFrom:
+            configMapKeyRef:
+              name: neo4j-config
+              key: NEO4J_URI
+
+        - name: NEO4J_USER
+          valueFrom:
+            secretKeyRef:
+              name: neo4j-secret
+              key: NEO4J_USER
+
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: neo4j-secret
+              key: NEO4J_PASSWORD
+
+---
+# ============================
+# FastAPI App 1 - Service
+# ============================
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-app2
+spec:
+  type: NodePort
+  selector:
+    app: fastapi-app2
+  ports:
+  - port: 8002
+    targetPort: 8002
+    nodePort: 30082
